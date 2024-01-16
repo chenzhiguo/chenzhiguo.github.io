@@ -1,0 +1,28 @@
+{
+    "name": "chenzhiguo",
+    "title": "My Blog",
+    "author": "BY <chenzhiguo@live.com>",
+    "version": "1.0.0",
+    "homepage": "http://chenzhiguo.cn",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chenzhiguo/chenzhiguo.github.io"
+    },
+    "bugs": "https://github.com/chenzhiguo/chenzhiguo.github.io/issues",
+    "devDependencies": {
+        "grunt": "^1.5.3",
+        "grunt-contrib-less": "^3.0.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-banner": "^0.6.0",
+        "grunt-contrib-uglify": "^5.2.1"
+    },
+    "scripts": {
+        "preview": "cd _site; python -m SimpleHTTPServer 8020",
+        "py3view": "cd _site; python3 -m http.server 8020",
+        "watch"  : "grunt watch & npm run preview & jekyll serve -w",
+        "py3wa"  : "grunt watch & npm run py3view & jekyll serve -w",
+        "boil"   : "git push boilerplate boilerplate:master",
+        "push"   : "git push origin master --tag",
+        "cafe"   : "git co gitcafe-pages; git merge master; git push gitcafe gitcafe-pages:gitcafe-pages --tag; git co master;"
+    }
+}
